@@ -8,6 +8,9 @@ Ziya Bahçeci 1805421-report
 
 Project Details
 The aim of this project is making it easier for users to rate and categorize the movies they watched of each genre. The program lets the user rate the movies and then it lists them in a tree so the user can see their ratings again later. The program has 5 main functions; adding a movie to the list, see all movies in the tree, updating a movie, delete a movie and the “save and exit” function. Linked lists are also used in this project.
+Flow Chart Of All Poject
+ <img src="/img/flow diagram.jpeg" alt="img1"/>
+ 
 1.	Adding a movie to the tree: In start menu, in order to add a movie to the list, the user should enter 1 to initialize “Press 1 to add a new film” function. After that, the movie genre should be chosen by entering the buttons set for the genre (sci-fi, horror, comedy, drama, romance). After the genre is chosen, the user should enter the movie name, movie year and their rating to the movie in that order. Then the movie will be added to the tree and the program will say “Film, year and rate added to the sci-fi tree” and return to the start menu.
 <img src="/img/1.jpeg" alt="img1"/>
  
@@ -28,6 +31,5 @@ The aim of this project is making it easier for users to rate and categorize the
  <img src="/img/0.jpeg" alt="img1"/>
 
 
-Flow Chart Of All Poject
- <img src="/img/flow diagram.jpeg" alt="img1"/>
+
  
