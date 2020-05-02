@@ -2,7 +2,7 @@
 <h1>Subject: Data Structures and Algorithms II (SEN2212)</h1>
 <h1>Project: Movie Categorizer</h1>
 Project Members
-Halis Bilal Kara 1804925-backend
+Halis Bilal Kara 1804925-backend /n
 Kaan Kamil 1806821-flow chart
 Ziya Bahçeci 1805421-report
 
