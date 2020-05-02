@@ -1,5 +1,5 @@
 
-<h1>Subject: Data Structures and Algorithms II (SEN2212)</h1>
+
 <h1>Project: Movie Categorizer</h1>
 <h2>Project Members</h2>
 <h3>Halis Bilal Kara 1804925-backend <br></h3>
