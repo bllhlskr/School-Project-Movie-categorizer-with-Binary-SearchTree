@@ -12,15 +12,22 @@ The aim of this project is making it easier for users to rate and categorize the
 <img src="/img/1.jpeg" alt="img1"/>
  
 2.	See all movies in the tree: In start menu, in order to see all the movies in the tree the user should enter number 2 in the console and initialize “press 2 to see all films in the tree” command. This command will list all movies, their year and rating each in their own genre. Then the program will say “All films listed” and return to the start menu.
- 
+ <img src="/img/2.jpeg" alt="img1"/>
 
 3.	Updating a movie already in the tree: In the start menu, in order to update a movie’s name, year and rating, the user should enter number 3 and initialize “Press 3 to update film” command. Then, enter the movie’s genre, and then the movie’s previous name and previous rating. Then they will be able to re-enter the new name, year and new rating of the movie. After those are done, the program will go back to the start menu.
- 
+ <img src="/img/3.jpeg" alt="img1"/>
 
 
 
 
 4.	Deleting a movie from the tree: In order to delete a film from the list, the user should enter number 4 and initialize the command “Press 4 to delete film”. After that, the user should choose the existing movie’s category. Then they should enter the movie’s name and rating in order. This will delete the movie in the tree and go back to start menu.
- 
+ <img src="/img/4.jpeg" alt="img1"/>
+  WRONG COMMAND: When in console, the command written and/or entered is wrong, the program will not give an exception but instead tell the user the mistake.
+   <img src="/img/4,1.jpeg" alt="img1"/>
 5.	Save and exit: Simply, when the user enters 0 and initializes the command “save and exit”, the program turns all trees to string and gets saved in a txt file. Next time the program is started, propgram reads the txt file and turns it back into tree.
- WRONG COMMAND: When in console, the command written and/or entered is wrong, the program will not give an exception but instead tell the user the mistake.
+ <img src="/img/0.jpeg" alt="img1"/>
+
+
+Flow Chart Of All Poject
+ <img src="/img/flowchart.jpeg" alt="img1"/>
+ 
