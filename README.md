@@ -29,5 +29,5 @@ The aim of this project is making it easier for users to rate and categorize the
 
 
 Flow Chart Of All Poject
- <img src="/img/flowchart.jpeg" alt="img1"/>
+ <img src="/img/flow diagram.jpeg" alt="img1"/>
  
