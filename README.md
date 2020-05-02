@@ -1,6 +1,6 @@
 # School-Project-Movie-categorizer-with-Binary-SearchTree
 Subject: Data Structures and Algorithms II (SEN2212)
-Project: Movie Categorizer
+<h1>Project: Movie Categorizer</h1>
 Project Members
 Halis Bilal Kara 1804925-backend
 Kaan Kamil 1806821-flow chart
@@ -8,6 +8,7 @@ Ziya Bahçeci 1805421-report
 
 Project Details
 The aim of this project is making it easier for users to rate and categorize the movies they watched of each genre. The program lets the user rate the movies and then it lists them in a tree so the user can see their ratings again later. The program has 5 main functions; adding a movie to the list, see all movies in the tree, updating a movie, delete a movie and the “save and exit” function. Linked lists are also used in this project.
+
 Flow Chart Of All Poject
  <img src="/img/flow diagram.jpeg" alt="img1"/>
  
