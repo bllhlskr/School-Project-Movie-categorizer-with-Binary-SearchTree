@@ -9,6 +9,7 @@ public class BinarySearchTree{
 
 
 
+ 
 public void addNode(String name,int year, double rate ) {
 	Node newNode = new Node(name,year,rate);
 	
@@ -29,19 +30,22 @@ public void addNode(String name,int year, double rate ) {
 			if(currentNode == null) {
 				
 				parent.leftChild = newNode;
-				return;
+				//return;
+				break;
 			}
 			}
 			else {
 				currentNode = currentNode.rightChild;
 				if(currentNode == null) {
 					parent.rightChild = newNode;
-					return;
+					//return;
+					break;
 				}
 		}
 		
 		}
 	}
+
 }
 
 public void inOrderTraversalTree(Node currentNode){
@@ -91,13 +95,10 @@ public Node findNode(double rate,String s) {
 public boolean remove(double rate,String s) {
 	
 	if(findNode(rate,s) == null) {
-		System.out.println("this film isnt in the tree");
+		System.out.println("This film isnt in the tree");
 		return false;
 	}
 	else {
-		
-	
-	
 	Node currentNode = root;
 	Node parent = root;
 	boolean isItAleftChild=true;
@@ -183,31 +184,12 @@ public boolean remove(double rate,String s) {
 			replacement.leftChild = currentNode.leftChild;
 			
 		}
-		
+	}
 	return true;
-		}
+		
 	  }
 	
-	public Node getReplacement(Node replacedNode) {
-		
-		Node replacementParent = replacedNode;
-		Node replacement = replacedNode;
-		
-		Node currentNode = replacedNode.rightChild;
-		
-		while(currentNode != null) {
-			replacementParent = replacement;
-			replacement = currentNode ;
-			currentNode = currentNode.leftChild;
-		}
-		if(replacement != replacedNode.rightChild) {
-			replacementParent.leftChild = replacement.rightChild;
-			replacement.rightChild = replacedNode.rightChild;
-		}
-		return replacement;
-		
-	}
-	
+
 	
 	 public  String serializeBinaryTree(Node rootNode) {
 	        if (rootNode == null) {
@@ -248,6 +230,26 @@ for (int i = 0; i < values.size(); i+=3) {
 	        }
 	        
 	    }
+		public Node getReplacement(Node replacedNode) {
+			
+			Node replacementParent = replacedNode;
+			Node replacement = replacedNode;
+			
+			Node currentNode = replacedNode.rightChild;
+			
+			while(currentNode != null) {
+				replacementParent = replacement;
+				replacement = currentNode ;
+				currentNode = currentNode.leftChild;
+			}
+			if(replacement != replacedNode.rightChild) {
+				replacementParent.leftChild = replacement.rightChild;
+				replacement.rightChild = replacedNode.rightChild;
+			}
+			return replacement;
+			
+		}
+		
 	 
 	
 	

@@ -6,6 +6,7 @@ public class Node{
 	int year;
 	String name;
 	double rate;
+	int height;
 	Node leftChild =null;
 	Node rightChild  =null;
 	

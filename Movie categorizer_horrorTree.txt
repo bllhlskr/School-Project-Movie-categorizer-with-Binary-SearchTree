@@ -1,1 +1,1 @@
-pulp,1999,8.6,Gora,1999,8.5,null,null,null,
+The Mist,2007,8.6,Paranormal Activity,2007,6.3,A Quiet Place,2018,5.3,null,null,The Cabin in the Woods,2011,7.8,null,null,null,
