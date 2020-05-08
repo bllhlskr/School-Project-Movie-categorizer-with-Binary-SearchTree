@@ -4,7 +4,7 @@
 <h2>Project Members</h2>
 <h3>Halis Bilal Kara 1804925-backend <br></h3>
 <h3>Kaan Kamil 1806821-flow chart<br></h3>
-<h3>Ziya Bahçeci 1805421-report<br></h3>
+<h3>Ziya Bahçeci 1805421-report&testing<br></h3>
 <hr>
 
 <h2>Project Details</h2>
