@@ -37,25 +37,19 @@ public class Linked_List {
 		while(currentNode != null) {
 			System.out.println(currentNode.treeName.toUpperCase());
 			currentNode.tree.inOrderTraversalTree(currentNode.tree.root);
+			currentNode.tree.count=1;
 			System.out.println("----------------------");
 			currentNode  = currentNode.next;
 		}
+		
 		System.out.println("------------------------");
 		System.out.println("All films listed");
 		System.out.println("------------------------");
 		
 	}
-	public void traverseAllTreesForName() {
-		Node_linkedList currentNode = root;
-		int count = 1;
-		while(currentNode != null) {
-			System.out.println(count +"."+currentNode.treeName);
-			currentNode  = currentNode.next;
-			count++;
-		}
-		count=1;
-		
-		
-	}
+	
+	
+	
+
 	
 }

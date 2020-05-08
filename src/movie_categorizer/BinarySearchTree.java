@@ -30,22 +30,22 @@ public void addNode(String name,int year, double rate ) {
 			if(currentNode == null) {
 				
 				parent.leftChild = newNode;
-				//return;
-				break;
+				return;
+			
 			}
 			}
 			else {
 				currentNode = currentNode.rightChild;
 				if(currentNode == null) {
 					parent.rightChild = newNode;
-					//return;
-					break;
+				return;
+					
 				}
 		}
 		
 		}
 	}
-
+	
 }
 
 public void inOrderTraversalTree(Node currentNode){
@@ -120,6 +120,7 @@ public boolean remove(double rate,String s) {
 			
 			
 			if(currentNode==null) {
+
 				return false;
 			}
 		}
@@ -184,7 +185,10 @@ public boolean remove(double rate,String s) {
 			replacement.leftChild = currentNode.leftChild;
 			
 		}
-	}
+		}
+	System.out.println("------------------------");
+	System.out.println("Your film is deleted");
+	System.out.println("------------------------");
 	return true;
 		
 	  }
@@ -256,10 +260,21 @@ for (int i = 0; i < values.size(); i+=3) {
 	
 	public void update(double rate,double newRate,int year,String s,String newName) {
 		
-		Node current =findNode(rate,s);
-		current.setName(newName);
-		current.setRate(newRate);
-		current.setYear(year);
+		Node current = null;
+		if(findNode(rate,s)== null) {
+			System.out.println("--------------");
+			System.out.println("this movie isnt in the tree");
+			System.out.println("--------------");
+		}
+		else {
+			current =findNode(rate,s);
+			current.setName(newName);
+			current.setRate(newRate);
+			current.setYear(year);
+			System.out.println("---------------------");
+			System.out.println("Film updated");
+			System.out.println("---------------------");			}
+		
 		
 		
 		

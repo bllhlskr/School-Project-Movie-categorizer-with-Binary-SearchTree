@@ -64,13 +64,12 @@ public class MainClass {
 		ll.addTree(comedyTree, "comedyTree");
 		ll.addTree(dramaTree, "dramaTree");
 		ll.addTree(romanceTree, "romanceTree");
-	ll.searchTree("scifiTree").deserializeBinaryTree(readFile("scifiTree"));
-//	
+	ll.searchTree("scifiTree").deserializeBinaryTree(readFile("scifiTree"));	
 		ll.searchTree("horrorTree").deserializeBinaryTree(readFile("horrorTree"));
 		ll.searchTree("comedyTree").deserializeBinaryTree(readFile("comedyTree"));
 		ll.searchTree("dramaTree").deserializeBinaryTree(readFile("dramaTree"));
 		ll.searchTree("romanceTree").deserializeBinaryTree(readFile("romanceTree"));
-//	
+	
 	
 	int firstChoise =9999;
 		
@@ -92,70 +91,81 @@ public class MainClass {
 					System.out.println("4.Drama");
 					System.out.println("5.Romance");
 					int category = sc.nextInt();
-//					ll.traverseAllTreesForName();
-//					System.out.println("0.add a new category");
-//					
-//                    
-//                    if(category == 0) {
-//						BinarySearchTree newTree = new BinarySearchTree();
-//						System.out.println("Please add new category name");
-//						String treeName = in.nextLine();
-//						ll.addTree(newTree, treeName);
-//						continue;
-//					}
-                    System.out.println("Add film name ");
-        			String filmName = in.nextLine();
-        			System.out.println("Add film year");
-        			int year = sc.nextInt();
-        			System.out.println("Add film a rate");
-        			double rate = sc.nextDouble();
+
+                   
+        			
+					 switch(category) {
+					 case 1 :
+						 System.out.println("Add film name ");
+		        			String filmName = in.nextLine();
+		        			System.out.println("Add film year");
+		        			int year = sc.nextInt();
+		        			System.out.println("Add film a rate");
+		        			double rate = sc.nextDouble();
+		        			scifiTree.addNode(filmName, year, rate);
+		        			System.out.println("------------------------");
+							System.out.println("Film, year and rate added to the sci-fi tree");
+							System.out.println("------------------------");
+		        			break;
+					 case 2 :
+						 System.out.println("Add film name ");
+		        			String filmName2 = in.nextLine();
+		        			System.out.println("Add film year");
+		        			int year2 = sc.nextInt();
+		        			System.out.println("Add film a rate");
+		        			double rate2 = sc.nextDouble();
+		        			horrorTree.addNode(filmName2, year2, rate2);
+		        			System.out.println("------------------------");
+							System.out.println("Film, year and rate added to the sci-fi tree");
+							System.out.println("------------------------");
+					 case 3:
+						 System.out.println("Add film name ");
+		        			String filmName3 = in.nextLine();
+		        			System.out.println("Add film year");
+		        			int year3 = sc.nextInt();
+		        			System.out.println("Add film a rate");
+		        			double rate3 = sc.nextDouble();
+		        			comedyTree.addNode(filmName3, year3, rate3);
+		        			System.out.println("------------------------");
+							System.out.println("Film, year and rate added to the sci-fi tree");
+							System.out.println("------------------------");
+		        			break;
+					 case 4 :
+						 System.out.println("Add film name ");
+		        			String filmName4 = in.nextLine();
+		        			System.out.println("Add film year");
+		        			int year4 = sc.nextInt();
+		        			System.out.println("Add film a rate");
+		        			double rate4 = sc.nextDouble();
+		        			dramaTree.addNode(filmName4, year4, rate4);
+		        			System.out.println("------------------------");
+							System.out.println("Film, year and rate added to the sci-fi tree");
+							System.out.println("------------------------");
+		        			break;
+					 case 5 :
+						 System.out.println("Add film name ");
+		        			String filmName5 = in.nextLine();
+		        			System.out.println("Add film year");
+		        			int year5 = sc.nextInt();
+		        			System.out.println("Add film a rate");
+		        			double rate5 = sc.nextDouble();
+		        			romanceTree.addNode(filmName5, year5, rate5);
+		        			System.out.println("------------------------");
+							System.out.println("Film, year and rate added to the sci-fi tree");
+							System.out.println("------------------------");
+		        			break;
+					 default :
+							System.out.println("-------------------");
+							System.out.println("This category number is wrong");
+							System.out.println("-------------------");
+	                         break;
+						
+						
+						}
 					 
+					continue;
 					
-					if(category == 1) {
-				       
-						
-						scifiTree.addNode(filmName, year, rate);
-						System.out.println("------------------------");
-						System.out.println("Film, year and rate added to the sci-fi tree");
-						System.out.println("------------------------");
-						
-						continue;
-					}	if(category == 2) {
-				
-						horrorTree.addNode(filmName, year, rate);
-						System.out.println("------------------------");
-						System.out.println("Film, year and rate added to the horror tree");
-						System.out.println("------------------------");
-						
-						continue;
-					}if(category == 3) {
-				
-						comedyTree.addNode(filmName, year, rate);
-						System.out.println("------------------------");
-						System.out.println("Film, year and rate added to the comedy tree");
-						System.out.println("------------------------");
-						
-						continue;
-					}if(category == 4) {
-				
-						dramaTree.addNode(filmName, year, rate);
-						System.out.println("------------------------");
-						System.out.println("Film, year and rate added to the drama tree");
-						System.out.println("------------------------");
-						
-						continue;
-					}if(category == 5) {
-				
-						romanceTree.addNode(filmName, year, rate);
-						System.out.println("------------------------");
-						System.out.println("Film, year and rate added to the romance tree");
-						System.out.println("------------------------");
-						
-						continue;
-					}
-			
-					
-				
+		
 				
 				case 2 : 
 					
@@ -172,7 +182,8 @@ public class MainClass {
 					System.out.println("5.Romance");
 					
 					int categoryUpdate = sc.nextInt();
-					if(categoryUpdate ==1) {
+					switch(categoryUpdate) {
+					case 1 : 
 						System.out.println("Sci-fi Movies");
 						scifiTree.inOrderTraversalTree(scifiTree.root);
 						System.out.println("Please enter the film name ");
@@ -186,79 +197,80 @@ public class MainClass {
 						System.out.println("Please enter the new  film year");
 						int newYear = sc.nextInt();
 						scifiTree.update(inRate, newinRate, newYear, film,newfilm);
+						break;
 						
-					}
-					if(categoryUpdate ==2) {
+					case 2 : 
 						System.out.println("Horror Movies");
 						horrorTree.inOrderTraversalTree(horrorTree.root);
 						System.out.println("Please enter current the film name ");
-						String film=in.nextLine();
+						String film2=in.nextLine();
 						System.out.println("Please enter the current film rate");
-						double inRate = sc.nextDouble();
+						double inRate2 = sc.nextDouble();
 						System.out.println("Please enter the new film name ");
-						String newfilm=in.nextLine();
+						String newfilm2=in.nextLine();
 						System.out.println("Please enter the new  film rate");
-						double newinRate = sc.nextDouble();
+						double newinRate2 = sc.nextDouble();
 						System.out.println("Please enter the new  film year");
-						int newYear = sc.nextInt();
-						horrorTree.update(inRate, newinRate, newYear, film,newfilm);
-						
-					}
-					if(categoryUpdate ==3) {
+						int newYear2 = sc.nextInt();
+						horrorTree.update(inRate2, newinRate2, newYear2, film2,newfilm2);
+						break;
+					case 3 :
 						System.out.println("Comedy Movies");
 						comedyTree.inOrderTraversalTree(comedyTree.root);
 						System.out.println("Please enter current the film name ");
-						String film=in.nextLine();
+						String film3=in.nextLine();
 						System.out.println("Please enter the current film rate");
-						double inRate = sc.nextDouble();
+						double inRate3 = sc.nextDouble();
 						System.out.println("Please enter the new film name ");
-						String newfilm=in.nextLine();
+						String newfilm3=in.nextLine();
 						System.out.println("Please enter the new  film rate");
-						double newinRate = sc.nextDouble();
+						double newinRate3 = sc.nextDouble();
 						System.out.println("Please enter the new  film year");
-						int newYear = sc.nextInt();
-						comedyTree.update(inRate, newinRate, newYear, film,newfilm);
-						
-					}
-					if(categoryUpdate ==4) {
+						int newYear3= sc.nextInt();
+						comedyTree.update(inRate3, newinRate3, newYear3, film3,newfilm3);
+						break;
+					case 4 : 
 						System.out.println("Drama Movies");
 						dramaTree.inOrderTraversalTree(dramaTree.root);
 						System.out.println("Please enter current the film name ");
-						String film=in.nextLine();
+						String film4=in.nextLine();
 						System.out.println("Please enter the current film rate");
-						double inRate = sc.nextDouble();
+						double inRate4= sc.nextDouble();
 						System.out.println("Please enter the new film name ");
-						String newfilm=in.nextLine();
+						String newfilm4=in.nextLine();
 						System.out.println("Please enter the new  film rate");
-						double newinRate = sc.nextDouble();
+						double newinRate4 = sc.nextDouble();
 						System.out.println("Please enter the new  film year");
-						int newYear = sc.nextInt();
-						dramaTree.update(inRate, newinRate, newYear, film,newfilm);
-						
-					}
-					if(categoryUpdate ==5) {
+						int newYear4 = sc.nextInt();
+						dramaTree.update(inRate4, newinRate4, newYear4, film4,newfilm4);
+						break;
+					case 5: 
 						System.out.println("Romance Movies");
 						romanceTree.inOrderTraversalTree(romanceTree.root);
 						System.out.println("Please enter current the film name ");
-						String film=in.nextLine();
+						String film5=in.nextLine();
 						System.out.println("Please enter the current film rate");
-						double inRate = sc.nextDouble();
+						double inRate5 = sc.nextDouble();
 						System.out.println("Please enter the new film name ");
-						String newfilm=in.nextLine();
+						String newfilm5=in.nextLine();
 						System.out.println("Please enter the new  film rate");
-						double newinRate = sc.nextDouble();
+						double newinRate5= sc.nextDouble();
 						System.out.println("Please enter the new  film year");
-						int newYear = sc.nextInt();
-						romanceTree.update(inRate, newinRate, newYear, film,newfilm);
-						
+						int newYear5 = sc.nextInt();
+						romanceTree.update(inRate5, newinRate5, newYear5, film5,newfilm5);
+						break;
+						default :
+						System.out.println("-------------------");
+						System.out.println("This category number is wrong");
+						System.out.println("-------------------");
+                         break;
+					
+					
 					}
-					System.out.println("---------------------");
-					System.out.println("Film updated");
-					System.out.println("---------------------");
 				continue;
 				
 				case 4 :
-					boolean flag = true;
+					
 					System.out.println("Please choose the movie category");
 					System.out.println("1.Sci-Fi");
 					System.out.println("2.Horror");
@@ -267,87 +279,62 @@ public class MainClass {
 					System.out.println("5.Romance");
 					
 					int categoryRemove = sc.nextInt();
-					if(categoryRemove ==1) {
+					switch(categoryRemove) {
+					case 1: 
 						System.out.println("Sci-fi Movies");
 						scifiTree.inOrderTraversalTree(scifiTree.root);
 						System.out.println("Please enter the film name");
 						String film=in.nextLine();
 						System.out.println("Please enter the film's rate to delete film");
 						double inRate = sc.nextDouble();
-						
-						if(scifiTree.remove(inRate,film) == false) {
-							flag=false;
-						}else {
-							flag = true;
-						}
-						
-					}
-					if(categoryRemove ==2) {
+						scifiTree.remove(inRate, film);
+						break;
+					case 2 :
 						System.out.println("Horror Movies");
 						horrorTree.inOrderTraversalTree(horrorTree.root);
 						System.out.println("Please enter the film name");
-						String film=in.nextLine();
+						String film2=in.nextLine();
 						System.out.println("Please enter the film's rate to delete film");
-						double inRate = sc.nextDouble();
-						
-						if(horrorTree.remove(inRate,film) == false) {
-							flag=false;
-						}else {
-							flag = true;
-						}
-						
-					}
-					if(categoryRemove ==3) {
+						double inRate2 = sc.nextDouble();
+						horrorTree.remove(inRate2, film2);
+						break;
+					case 3 :
 						System.out.println("Comedy Movies");
 						comedyTree.inOrderTraversalTree(comedyTree.root);
 						System.out.println("Please enter the film name");
-						String film=in.nextLine();
+						String film3=in.nextLine();
 						System.out.println("Please enter the film's rate to delete film");
-						double inRate = sc.nextDouble();
-						
-						if(comedyTree.remove(inRate,film) == false) {
-							flag=false;
-						}else {
-							flag = true;
-						}
-						
-					}
-					if(categoryRemove ==4) {
+						double inRate3 = sc.nextDouble();
+						comedyTree.remove(inRate3, film3);
+						break;
+					case 4:
 						System.out.println("Drama Movies");
 						dramaTree.inOrderTraversalTree(dramaTree.root);
 						System.out.println("Please enter the film name");
-						String film=in.nextLine();
+						String film4=in.nextLine();
 						System.out.println("Please enter the film's rate to delete film");
-						double inRate = sc.nextDouble();
+						double inRate4 = sc.nextDouble();
+						dramaTree.remove(inRate4, film4);
 						
-						if(dramaTree.remove(inRate,film) == false) {
-							flag=false;
-						}else {
-							flag = true;
-						}
-						
-					}
-					if(categoryRemove ==5) {
+					case 5:
 						System.out.println("romance Movies");
 						romanceTree.inOrderTraversalTree(romanceTree.root);
 						System.out.println("Please enter the film name");
-						String film=in.nextLine();
+						String film5=in.nextLine();
 						System.out.println("Please enter the film's rate to delete film");
-						double inRate = sc.nextDouble();
-						
-						if(romanceTree.remove(inRate,film) == false) {
-							flag=false;
-						}else {
-							flag = true;
-						}
+						double inRate5 = sc.nextDouble();
+						romanceTree.remove(inRate5, film5);
+						break;
+					default : 
+						System.out.println("-------------------");
+						System.out.println("This category number is wrong");
+						System.out.println("-------------------");
+                         break;
 					}
-				if(flag) {
-					System.out.println("------------------------");
-					System.out.println("Your film is deleted");
-					System.out.println("------------------------");
-				}
+					
 					
 					continue;
+					
 				
                  case 0 :
                 	 writeToFile(scifiTree.serializeBinaryTree(scifiTree.root),"scifiTree");
@@ -359,35 +346,13 @@ public class MainClass {
                 	 System.out.println("SAVE & EXIT");
                 	 System.out.println("----------------");
 					break ;
-				
+				default :
+					System.out.println("Wrong command");
 			}
 	  }
 		
 	  }
-//	  public static void addFilm() {
-//
-//			System.out.println("add film name ");
-//			String filmName = in.nextLine();
-//			System.out.println("add film year");
-//			int year = sc.nextInt();
-//			System.out.println("add film a rate");
-//			double rate = sc.nextDouble();
-//	  }
-//	  public static void addMovie() {
-//			System.out.println("add film name ");
-//			 String name = in.nextLine();
-//			System.out.println("add film year");
-//			int year = sc.nextInt();
-//			System.out.println("add film a rate");
-//			 double rate = sc.nextDouble();
-//			 
-//			//theTree.addNode(name,year, rate);
-//			System.out.println("------------------------");
-//			System.out.println("film, year and rate added to the sci*-Fi tree");
-//			System.out.println("------------------------");
-//			
-//	  }
-	
+
 	
 
 	  
