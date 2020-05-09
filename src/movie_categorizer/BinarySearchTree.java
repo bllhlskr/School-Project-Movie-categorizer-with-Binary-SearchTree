@@ -1,6 +1,6 @@
 package movie_categorizer;
 
-import java.io.Serializable;
+
 import java.util.ArrayList;
 
 public class BinarySearchTree{
@@ -58,6 +58,7 @@ public void inOrderTraversalTree(Node currentNode){
 		inOrderTraversalTree(currentNode.rightChild);
 
 	}
+	
 	}
 
 
@@ -75,6 +76,7 @@ public Node findNode(double rate,String s) {
 	Node currentNode= root;
 	
 	while(currentNode.rate != rate || !currentNode.name.equals(s) ) {
+		
 		if(rate<currentNode.rate) {
 			currentNode = currentNode.leftChild;
 			
@@ -189,6 +191,7 @@ public boolean remove(double rate,String s) {
 	System.out.println("------------------------");
 	System.out.println("Your film is deleted");
 	System.out.println("------------------------");
+	count =1;
 	return true;
 		
 	  }
@@ -267,13 +270,16 @@ for (int i = 0; i < values.size(); i+=3) {
 			System.out.println("--------------");
 		}
 		else {
-			current =findNode(rate,s);
-			current.setName(newName);
-			current.setRate(newRate);
-			current.setYear(year);
+			
+			remove(rate,s);
+			addNode(newName,year,newRate);
+			
+			
+			
 			System.out.println("---------------------");
 			System.out.println("Film updated");
 			System.out.println("---------------------");			}
+		count=1;
 		
 		
 		
