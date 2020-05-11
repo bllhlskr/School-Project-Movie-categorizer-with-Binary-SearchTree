@@ -89,6 +89,7 @@ public Node findNode(double rate,String s) {
 			}
 		
 		}
+	count = 1;
 		return currentNode;
 }
 	
@@ -97,7 +98,9 @@ public Node findNode(double rate,String s) {
 public boolean remove(double rate,String s) {
 	
 	if(findNode(rate,s) == null) {
+		System.out.println("------------------");
 		System.out.println("This film isnt in the tree");
+		System.out.println("------------------");
 		return false;
 	}
 	else {
@@ -123,6 +126,7 @@ public boolean remove(double rate,String s) {
 			
 			if(currentNode==null) {
 
+				count =1;
 				return false;
 			}
 		}
@@ -188,9 +192,7 @@ public boolean remove(double rate,String s) {
 			
 		}
 		}
-	System.out.println("------------------------");
-	System.out.println("Your film is deleted");
-	System.out.println("------------------------");
+	
 	count =1;
 	return true;
 		
@@ -273,9 +275,6 @@ for (int i = 0; i < values.size(); i+=3) {
 			
 			remove(rate,s);
 			addNode(newName,year,newRate);
-			
-			
-			
 			System.out.println("---------------------");
 			System.out.println("Film updated");
 			System.out.println("---------------------");			}
